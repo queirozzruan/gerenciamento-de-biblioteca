@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciamento de Biblioteca</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Gerenciamento de Biblioteca</h1>
+    <form id="book-form">
+      <div class="form-control">
+        <label for="title">Título</label>
+        <input type="text" id="title" required>
+      </div>
+      <div class="form-control">
+        <label for="author">Autor</label>
+        <input type="text" id="author" required>
+      </div>
+      <div class="form-control">
+        <label for="cover">URL da Imagem de Capa</label>
+        <input type="text" id="cover">
+      </div>
+      <div class="form-control">
+        <label for="description">Descrição</label>
+        <textarea id="description" rows="3"></textarea>
+      </div>
+      <button type="submit">Adicionar Livro</button>
+    </form>
+    <button id="clear-books">Limpar Todos</button>
+    <input type="text" id="search" placeholder="Pesquisar Livros...">
+    <h2>Lista de Livros</h2>
+    <ul id="book-list"></ul>
+    <div id="message"></div>
+  </div>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn">&times;</span>
+      <div class="popup-body">
+        <img id="popup-img" src="" alt="Capa do Livro">
+        <div class="popup-details">
+          <h3 id="popup-title"></h3>
+          <p id="popup-author"></p>
+          <p id="popup-description"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>
